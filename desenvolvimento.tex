@@ -1,3 +1,39 @@
 \chapter{Desenvolvimento da regressão múltipla}
 \label{ref:desenvolvimento}
 Foi feita uma análise de regressão linear múltipla sobre os valores da taxa de mortalidade infantil (menores de 1 ano) por 1000 nascidos - variável dependente -, da taxa de analfabetismo da população com mais de 15 anos e da proporção da população servida por esgotamento sanitário - variáveis independentes - a partir dos dados de todos os estados brasileiros e do Distrito Federal. A regressão é apresentada abaixo, com $\alpha$ = 0.5:
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Estados             & \multicolumn{1}{c|}{Taxa de mortalidade infantil} & \multicolumn{1}{c|}{Taxa de saneamento} & \multicolumn{1}{c|}{Taxa de Analfabetismo} & \multicolumn{1}{c|}{Taxa de mortalidade calculada} & \multicolumn{1}{c|}{Erro} \\ \hline
+Acre                & 18.5                                              & 43.46                                   & 14.38                                      & 19.18125422                                        & 0.812542175               \\ \hline
+Alagoas             & 17                                                & 45.7                                    & 21.78                                      & 20.39793668                                        & 3.397936684               \\ \hline
+Amapá               & 24.1                                              & 56.55                                   & 7.6                                        & 16.70047933                                        & 7.399520666               \\ \hline
+Amazonas            & 20                                                & 61.55                                   & 8.35                                       & 16.39320874                                        & 3.606791258               \\ \hline
+Bahia               & 20.1                                              & 57.52                                   & 14.43                                      & 17.9224492                                         & 2.1775508                 \\ \hline
+Ceará               & 15.2                                              & 52.53                                   & 16.47                                      & 18.76372816                                        & 3.563728161               \\ \hline
+Distrito Federal    & 12.1                                              & 96                                      & 3.15                                       & 12.2884138                                         & 0.1884137999              \\ \hline
+Espírito Santo      & 11.7                                              & 82.79                                   & 6.38                                       & 14.09939333                                        & 2.399393331               \\ \hline
+Goiás               & 16.1                                              & 62.43                                   & 7.18                                       & 16.08950422                                        & 0.01049578045             \\ \hline
+Maranhão            & 20                                                & 50.32                                   & 21.64                                      & 19.9543124                                         & 0.04568759527             \\ \hline
+Mato Grosso         & 18.5                                              & 35.45                                   & 7.39                                       & 18.56370622                                        & 0.06370622139             \\ \hline
+Mato Grosso do Sul  & 13.9                                              & 39.5                                    & 6.37                                       & 18.00278592                                        & 4.102785919               \\ \hline
+Minas Gerais        & 15.5                                              & 79.7                                    & 7.87                                       & 14.66381977                                        & 0.8361802335              \\ \hline
+Pará                & 20.6                                              & 51.51                                   & 10.62                                      & 17.73415864                                        & 2.86584136                \\ \hline
+Paraíba             & 17.5                                              & 63.98                                   & 17.23                                      & 17.87650259                                        & 0.3765025904              \\ \hline
+Paraná              & 11.8                                              & 75.54                                   & 6.27                                       & 14.73234609                                        & 2.932346088               \\ \hline
+Pernambuco          & 15.6                                              & 66.61                                   & 15.74                                      & 17.35357402                                        & 1.753574019               \\ \hline
+Piauí               & 20.8                                              & 71.38                                   & 19.31                                      & 17.60771458                                        & 3.19228542                \\ \hline
+Rio de Janeiro      & 14.1                                              & 90.46                                   & 3.68                                       & 12.88980624                                        & 1.210193758               \\ \hline
+Rio Grande do Norte & 16.9                                              & 75.38                                   & 15.84                                      & 16.58158064                                        & 0.3184193554              \\ \hline
+Rio Grande do Sul   & 11.1                                              & 85.78                                   & 4.27                                       & 13.42511917                                        & 2.325119172               \\ \hline
+Rondônia            & 17.1                                              & 72.76                                   & 9.74                                       & 15.64842047                                        & 1.451579528               \\ \hline
+Roraima             & 15.4                                              & 88.55                                   & 9.62                                       & 14.20095429                                        & 1.199045711               \\ \hline
+Santa Catarina      & 10.8                                              & 91.02                                   & 3.88                                       & 12.87763194                                        & 2.077631941               \\ \hline
+São Paulo           & 11.6                                              & 95.82                                   & 3.67                                       & 12.40434867                                        & 0.8043486742              \\ \hline
+Sergipe             & 17.6                                              & 68.62                                   & 15.98                                      & 17.2182602                                         & 0.3817397969              \\ \hline
+Tocantins           & 19.3                                              & 37.13                                   & 12.17                                      & 19.32859044                                        & 0.0285904435              \\ \hline
+\end{tabular}%
+}
+\end{table}

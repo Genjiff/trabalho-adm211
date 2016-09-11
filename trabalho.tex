@@ -13,13 +13,15 @@
 \usepackage{multicol}
 \usepackage{framed}
 \usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
 % O comando abaixo define o diretorio onde devem ser colocadas as imagens.
 % Neste caso o diretorio é ./imagens/
 \graphicspath{ {./imagens/} }
 \def\lstlistingname{Listagem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dados da monografia
+% Dados do Trabalho
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\meunome}{José Lucas dos Santos Borges, Luiz Felipe Rosário}
@@ -30,8 +32,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% O comando \obs aqui definido permite que o autor faca anotacoes na
-%% monografia que aparecem no PDF gerado. Para ativar o comando, descomente
+%% O comando \obs aqui definido permite que o autor faca anotacoes no
+%% trabalho que aparecem no PDF gerado. Para ativar o comando, descomente
 %% a primeira linha e comente a segunda.
 %% Exemplo de uso: \obs{Preciso melhorar este parágrafo...}
 
@@ -55,13 +57,13 @@
 
 \sumario
 
-% O conteudo da monografia esta' nos seguintes arquivos:
+% O conteudo do trabalho esta' nos seguintes arquivos:
 \input{resumo.tex}
 \input{introducao.tex}
 \input{desenvolvimento.tex}
 \input{validacao.tex}
 \input{conclusao.tex}
 
-\bibliography{monografia}
+\bibliography{trabalho}
 
 \end{document}
