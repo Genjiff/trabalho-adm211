@@ -1,3 +1,120 @@
-\chapter{Validação}
+\chapter{Validação do Modelo Proposto}
 
+\textbf{1. Homocedasticidade}
 
+Para testarmos a homocedasticidade devemos verificar se a variância dos variância dos resíduos (u) é constante para todos os valores. Para verificação deste pressuposto,
+utilizaremos o teste de Pesaran-Pesaran.
+
+Os valores utilizados no teste foram os seguintes:
+
+\begin{center}
+\begin{longtable}{|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{Observação} & \multicolumn{1}{c|}{Taxa de mort. prevista} & \multicolumn{1}{c|}{Resíduos} & \multicolumn{1}{c|}{y\textsuperscript{2}} & \multicolumn{1}{c|}{u\textsuperscript{2}} \\ \hline
+1                                & 18,898548333                                      & -0,398548333                  & 357,1551290941          & 0,1588407737            \\ \hline
+2                                & 19,0433062994                                     & -2,0433062994                 & 362,6475148113          & 4,175100633             \\ \hline
+3                                & 16,4955285743                                     & 7,6044714257                  & 272,1024629463          & 57,827985664            \\ \hline
+4                                & 17,4989738524                                     & 2,5010261476                  & 306,2140858874          & 6,2551317909            \\ \hline
+5                                & 17,9108085623                                     & 2,1891914377                  & 320,7970633563          & 4,7925591508            \\ \hline
+6                                & 18,82056665                                       & -3,62056665                   & 354,213729028           & 13,1085028673           \\ \hline
+7                                & 12,068471693                                      & 0,031528307                   & 145,6480090053          & 0,0009940341            \\ \hline
+8                                & 14,2270857395                                     & -2,5270857395                 & 202,4099686403          & 6,386162335             \\ \hline
+9                                & 15,2500715166                                     & 0,8499284834                  & 232,5646812612          & 0,7223784269            \\ \hline
+10                               & 21,9711379998                                     & -1,9711379998                 & 482,7309050083          & 3,8853850144            \\ \hline
+11                               & 18,3882236801                                     & 0,1117763199                  & 338,1267701079          & 0,0124939457            \\ \hline
+12                               & 17,4727152633                                     & -3,5727152633                 & 305,2957786735          & 12,7642943529           \\ \hline
+13                               & 14,6550404545                                     & 0,8449595455                  & 214,7702107239          & 0,7139566335            \\ \hline
+14                               & 19,4207165889                                     & 1,1792834111                  & 377,164232827           & 1,3907093637            \\ \hline
+15                               & 16,5156237909                                     & 0,9843762091                  & 272,7658292037          & 0,968996521             \\ \hline
+16                               & 14,4158318771                                     & -2,6158318771                 & 207,8162087085          & 6,8425764092            \\ \hline
+17                               & 16,2121909247                                     & -0,6121909247                 & 262,8351345783          & 0,3747777283            \\ \hline
+18                               & 19,2518390307                                     & 1,5481609693                  & 370,6333060645          & 2,3968023868            \\ \hline
+19                               & 12,574655617                                      & 1,525344383                   & 158,1219638855          & 2,3266754868            \\ \hline
+20                               & 15,3106166025                                     & 1,5893833975                  & 234,4149807494          & 2,5261395842            \\ \hline
+21                               & 13,6673066389                                     & -2,5673066389                 & 186,7952707622          & 6,5910633782            \\ \hline
+22                               & 17,3317103721                                     & -0,2317103721                 & 300,3881844213          & 0,0536896965            \\ \hline
+23                               & 14,7400518279                                     & 0,6599481721                  & 217,2691278902          & 0,4355315898            \\ \hline
+24                               & 13,2900588893                                     & -2,4900588893                 & 176,6256652804          & 6,2003932721            \\ \hline
+25                               & 11,9455505118                                     & -0,3455505118                 & 142,6961770295          & 0,1194051562            \\ \hline
+26                               & 16,1147857545                                     & 1,4852142455                  & 259,6863199134          & 2,205861355             \\ \hline
+27                               & 19,4085829553                                     & -0,1085829553                 & 376,693092334           & 0,0117902582            \\ \hline
+\end{longtable}
+\end{center}
+Aplicando o teste temos:
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{7}{|c|}{Resumo dos Resultados}                                                                                                                                                                                                                    \\ \hline
+Estatísticas da Regressão &                                   &                                      &                                     &                                   &                                        &                                      \\ \hline
+R Múltiplo                & 0,0210134793                      &                                      &                                     &                                   &                                        &                                      \\ \hline
+R Quadrado                & 0,0004415663                      &                                      &                                     &                                   &                                        &                                      \\ \hline
+R Quadrado Ajustado       & -0,039540771                      &                                      &                                     &                                   &                                        &                                      \\ \hline
+Erro Padrão               & 11,3282189109                     &                                      &                                     &                                   &                                        &                                      \\ \hline
+Observações               & 27                                &                                      &                                     &                                   &                                        &                                      \\ \hline
+                          &                                   &                                      &                                     &                                   &                                        &                                      \\ \hline
+Análise de Variação       &                                   &                                      &                                     &                                   &                                        &                                      \\ \hline
+                          & \multicolumn{1}{c|}{df}           & \multicolumn{1}{c|}{SS}              & \multicolumn{1}{c|}{MS}             & \multicolumn{1}{c|}{F}            & \multicolumn{1}{c|}{F de Significação} &                                      \\ \hline
+Regressão                 & \multicolumn{1}{c|}{1}            & \multicolumn{1}{c|}{1,4172648589}    & \multicolumn{1}{c|}{1,4172648589}   & \multicolumn{1}{c|}{0,0110440345} & \multicolumn{1}{c|}{0,9171425572}      &                                      \\ \hline
+Resíduos                  & \multicolumn{1}{c|}{25}           & \multicolumn{1}{c|}{3208,2135923056} & \multicolumn{1}{c|}{128,3285436922} & \multicolumn{1}{c|}{}             & \multicolumn{1}{c|}{}                  &                                      \\ \hline
+Total                     & \multicolumn{1}{c|}{26}           & \multicolumn{1}{c|}{3209,6308571646} & \multicolumn{1}{c|}{}               & \multicolumn{1}{c|}{}             & \multicolumn{1}{c|}{}                  &                                      \\ \hline
+                          &                                   &                                      &                                     &                                   &                                        &                                      \\ \hline
+                          & \multicolumn{1}{c|}{Coeficientes} & \multicolumn{1}{c|}{Erro Padrão}     & \multicolumn{1}{c|}{t Stat}         & \multicolumn{1}{c|}{P-valor}      & \multicolumn{1}{c|}{95\% Inferiores}   & \multicolumn{1}{c|}{95\% Superiores} \\ \hline
+Intercessão               & 4,5497285577                      & 7,5147018796                         & 0,6054436531                        & 0,5503415497                      & -10,9270896758                         & 20,0265467913                        \\ \hline
+y\textsuperscript{2}      & 0,0027432012                      & 0,0261032024                         & 0,1050906012                        & 0,9171425572                      & -0,0510173504                          & 0,0565037529                         \\ \hline
+\end{tabular}%
+}
+\end{table}
+Podemos verificar que a regressão do quadrado dos resíduos em relação ao quadrado dos valores estimados não é válida, visto que o R-Quadrado nos diz que há pouca
+correlação entre as variáveis, o P-Valor ser de 0,9171 e o F-Significação estar acima do limiar de 3,4. Todas estas evidências indicam que não há heterocedasticidade no modelo.
+
+\textbf{2. Normalidade}
+
+É importante confirmar se o modelo é válido no quesito de normalidade dos erros, afinal a violação da normalidade pode estar ligada a alguns aspectos relacionados ao modelo,
+tais como: omissão de variáveis explicativas importantes, inclusão de variável explicativa irrelevante e utilização de relação matemática incorreta para análise entre as variáveis.
+\\
+
+Para determinar se os erros seguem a distribuição normal foi utilizado o teste de Komolgorov-Smirnov. No desenvolvimento do mesmo, obteve-se o seguinte resultado:
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Observação & U             & hi = ui/s     & Zi           & i/n          & D                      \\ \hline
+1          & -3,62056665   & -1,542476788  & 0,0614788872 & 0,037037037  & -0,0244418501          \\ \hline
+2          & -3,5727152633 & -1,5220905721 & 0,063993194  & 0,0740740741 & 0,0100808801           \\ \hline
+3          & -2,6158318771 & -1,1144277517 & 0,1325478616 & 0,1111111111 & -0,0214367505          \\ \hline
+4          & -2,5673066389 & -1,0937544536 & 0,1370313424 & 0,1481481481 & 0,0111168057           \\ \hline
+5          & -2,5270857395 & -1,0766190686 & 0,1408252409 & 0,1851851852 & 0,0443599443           \\ \hline
+6          & -2,4900588893 & -1,0608444502 & 0,1443802988 & 0,2222222222 & 0,0778419234           \\ \hline
+7          & -2,0433062994 & -0,870513608  & 0,1920098929 & 0,2592592593 & 0,0672493663           \\ \hline
+8          & -1,9711379998 & -0,8397676122 & 0,2005193481 & 0,2962962963 & 0,0957769482           \\ \hline
+9          & -0,6121909247 & -0,2608128457 & 0,3971184189 & 0,3333333333 & -0,0637850855          \\ \hline
+10         & -0,398548333  & -0,1697942924 & 0,4325859579 & 0,3703703704 & -0,0622155875          \\ \hline
+11         & -0,3455505118 & -0,1472155314 & 0,4414809509 & 0,4074074074 & -0,0340735435          \\ \hline
+12         & -0,2317103721 & -0,0987160036 & 0,4606818809 & 0,4444444444 & -0,0162374365          \\ \hline
+13         & -0,1085829553 & -0,0462597997 & 0,4815515901 & 0,4814814815 & -7,01085922873434E-005 \\ \hline
+14         & 0,031528307   & 0,0134320636  & 0,505358457  & 0,5185185185 & 0,0131600615           \\ \hline
+15         & 0,1117763199  & 0,0476202748  & 0,5189905633 & 0,5555555556 & 0,0365649922           \\ \hline
+16         & 0,6599481721  & 0,2811589552  & 0,6107057578 & 0,5925925926 & -0,0181131653          \\ \hline
+17         & 0,8449595455  & 0,359979697   & 0,6405688417 & 0,6296296296 & -0,0109392121          \\ \hline
+18         & 0,8499284834  & 0,3620966229  & 0,6413600864 & 0,6666666667 & 0,0253065803           \\ \hline
+19         & 0,9843762091  & 0,4193756392  & 0,6625291876 & 0,7037037037 & 0,0411745161           \\ \hline
+20         & 1,1792834111  & 0,5024123194  & 0,6923112425 & 0,7407407407 & 0,0484294983           \\ \hline
+21         & 1,4852142455  & 0,6327486055  & 0,7365510882 & 0,7777777778 & 0,0412266896           \\ \hline
+22         & 1,525344383   & 0,6498453231  & 0,7421039303 & 0,8148148148 & 0,0727108845           \\ \hline
+23         & 1,5481609693  & 0,6595659161  & 0,7452337836 & 0,8518518519 & 0,1066180683           \\ \hline
+24         & 1,5893833975  & 0,6771279843  & 0,7508376225 & 0,8888888889 & 0,1380512663           \\ \hline
+25         & 2,1891914377  & 0,9326653266  & 0,8245036037 & 0,9259259259 & 0,1014223223           \\ \hline
+26         & 2,5010261476  & 1,0655168518  & 0,8566789481 & 0,962962963  & 0,1062840149           \\ \hline
+27         & 7,6044714257  & 3,2397471978  & 0,9994018214 & 1            & 0,0005981786           \\ \hline
+           &               &               &              &              &                        \\ \hline
+           &               &               &              & Max(D)       & 0,1380512663           \\ \hline
+           &               &               &              & d(30)        & 0,27                   \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+Podemos ver que o maior valor de D é de 0,138051, que é abaixo do valor crítico que é de 0,27. Assim temos evidências de que os resíduos se comportam seguindo uma distribuição normal de probabilidades.
