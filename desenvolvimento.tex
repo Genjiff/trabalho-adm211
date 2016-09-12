@@ -8,7 +8,7 @@ e do Distrito Federal. Os dados foram retirados do site do IDB \cite{idb} e são
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-Estados             & \multicolumn{1}{c|}{Taxa de mortalidade infantil} & \multicolumn{1}{c|}{População coberta por saneamento} & \multicolumn{1}{c|}{População servida por coleta de lixo} & \multicolumn{1}{c|}{Taxa de mortalidade calculada} & \multicolumn{1}{c|}{Erro} \\ \hline
+Estados             & \multicolumn{1}{c|}{Taxa de mortalidade infantil} & \multicolumn{1}{c|}{População coberta por esgotamento} & \multicolumn{1}{c|}{População servida por coleta de lixo} & \multicolumn{1}{c|}{Taxa de mortalidade calculada} & \multicolumn{1}{c|}{Erro} \\ \hline
 Acre                & 18.5                                              & 43.46                                                 & 78,21                                                     & 18,898548333                                       & -0,398548333              \\ \hline
 Alagoas             & 17                                                & 45.7                                                  & 76,11                                                     & 19,0433062994                                      & -2,0433062994             \\ \hline
 Amapá               & 24.1                                              & 56.55                                                 & 87,87                                                     & 16,4955285743                                      & 7,6044714257              \\ \hline
@@ -61,7 +61,7 @@ Total                                & 26                    & 316,6296296296   
                                      & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
                                      & Coeficientes          & Erro Padrão           & Estatística T         & P-valor               & 95\% Inferiores       & 95\% Superiores       \\ \hline
 Intercessão                          & 33,711583166          & 3,7884411322          & 8,8985368889          & 4,56093581088682E-009 & 25,8926249625         & 41,5305413695         \\ \hline
-População coberta por saneamento     & -0,0742554977         & 0,0305824409          & -2,4280435299         & 0,0230469361          & -0,1373745534         & -0,011136442          \\ \hline
+População coberta por esgotamento    & -0,0742554977         & 0,0305824409          & -2,4280435299         & 0,0230469361          & -0,1373745534         & -0,011136442          \\ \hline
 População servida por coleta de lixo & -0,1481382292         & 0,0529031159          & -2,8001796591         & 0,0099250388          & -0,2573248941         & -0,0389515643         \\ \hline
 \end{tabular}%
 }
@@ -69,16 +69,16 @@ População servida por coleta de lixo & -0,1481382292         & 0,0529031159   
 
 Sendo “t” o índice da observação e e[t] o erro padrão da regressão múltipla para cada observação, a expressão da regressão linear foi a seguinte:
 
-\textbf{mort[t] = + 33.7116 -0.0742555saneam[t] -0.148138coleta[t] + e[t]}
+\textbf{mort[t] = + 33.7116 -0.0742555esgot[t] -0.148138coleta[t] + e[t]}
 
 Os coeficientes da regressão se mostram significativos, pois podemos observar que a estatística T de todos eles possuem valor absoluto superior a 2 e p-valor inferior a 0,05.
 
-Nossa hipótese de que as variáveis de saneamento e coleta de lixo explicam a mortalidade infantil se mantém válida, devido ao valor de F = 14,52428173 ser maior que o F Crítico
+Nossa hipótese de que as variáveis de esgotamento e coleta de lixo explicam a mortalidade infantil se mantém válida, devido ao valor de F = 14,52428173 ser maior que o F Crítico
 de 3,4 para 2 graus de liberdade do numerador e 24 graus de liberdade do denominador.
 
 Interpretando os coeficientes de regressão em si, podemos retirar diversas informações pertinentes. Ambos os coeficientes das variáveis independentes (Porcentagens da população
-coberta por saneamento e por coleta de lixo) possuem uma relação inversa com a variável dependente (taxa de mortalidade infantil) , ou seja, o aumento de valor de qualquer uma das
+coberta por esgotamento e por coleta de lixo) possuem uma relação inversa com a variável dependente (taxa de mortalidade infantil), ou seja, o aumento de valor de qualquer uma das
 duas variáveis independentes deve levar à redução do valor da variável dependente.
 
-Pela expressão da regressão linear também podemos inferir que o aumento de uma unidade na taxa de saneamento leva à redução de 0,0742555 unidades na taxa de mortalidade e o aumento
+Pela expressão da regressão linear também podemos inferir que o aumento de uma unidade na taxa de esgotamento leva à redução de 0,0742555 unidades na taxa de mortalidade e o aumento
 de uma unidade na taxa de coleta de lixo leva à redução de 0,148138 unidades na taxa de mortalidade, além dos acréscimos devido ao erro.
