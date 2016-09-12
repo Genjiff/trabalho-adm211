@@ -1,39 +1,84 @@
 \chapter{Desenvolvimento da regressão múltipla}
 \label{ref:desenvolvimento}
-Foi feita uma análise de regressão linear múltipla sobre os valores da taxa de mortalidade infantil (menores de 1 ano) por 1000 nascidos - variável dependente -, da taxa de analfabetismo da população com mais de 15 anos e da proporção da população servida por esgotamento sanitário - variáveis independentes - a partir dos dados de todos os estados brasileiros e do Distrito Federal. A regressão é apresentada abaixo, com $\alpha$ = 0.5:
+Foi feita uma análise de regressão linear múltipla sobre os valores da taxa de mortalidade infantil (menores de 1 ano) por 1000 nascidos - variável dependente -, da proporção
+da população servida por esgotamento sanitário e pela proporção da população servida por coleta de lixo - variáveis independentes - a partir dos dados de todos os estados brasileiros
+e do Distrito Federal. A regressão é apresentada abaixo, com $\alpha$ = 0.5:
 \begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-Estados             & \multicolumn{1}{c|}{Taxa de mortalidade infantil} & \multicolumn{1}{c|}{Taxa de saneamento} & \multicolumn{1}{c|}{Taxa de Analfabetismo} & \multicolumn{1}{c|}{Taxa de mortalidade calculada} & \multicolumn{1}{c|}{Erro} \\ \hline
-Acre                & 18.5                                              & 43.46                                   & 14.38                                      & 19.18125422                                        & 0.812542175               \\ \hline
-Alagoas             & 17                                                & 45.7                                    & 21.78                                      & 20.39793668                                        & 3.397936684               \\ \hline
-Amapá               & 24.1                                              & 56.55                                   & 7.6                                        & 16.70047933                                        & 7.399520666               \\ \hline
-Amazonas            & 20                                                & 61.55                                   & 8.35                                       & 16.39320874                                        & 3.606791258               \\ \hline
-Bahia               & 20.1                                              & 57.52                                   & 14.43                                      & 17.9224492                                         & 2.1775508                 \\ \hline
-Ceará               & 15.2                                              & 52.53                                   & 16.47                                      & 18.76372816                                        & 3.563728161               \\ \hline
-Distrito Federal    & 12.1                                              & 96                                      & 3.15                                       & 12.2884138                                         & 0.1884137999              \\ \hline
-Espírito Santo      & 11.7                                              & 82.79                                   & 6.38                                       & 14.09939333                                        & 2.399393331               \\ \hline
-Goiás               & 16.1                                              & 62.43                                   & 7.18                                       & 16.08950422                                        & 0.01049578045             \\ \hline
-Maranhão            & 20                                                & 50.32                                   & 21.64                                      & 19.9543124                                         & 0.04568759527             \\ \hline
-Mato Grosso         & 18.5                                              & 35.45                                   & 7.39                                       & 18.56370622                                        & 0.06370622139             \\ \hline
-Mato Grosso do Sul  & 13.9                                              & 39.5                                    & 6.37                                       & 18.00278592                                        & 4.102785919               \\ \hline
-Minas Gerais        & 15.5                                              & 79.7                                    & 7.87                                       & 14.66381977                                        & 0.8361802335              \\ \hline
-Pará                & 20.6                                              & 51.51                                   & 10.62                                      & 17.73415864                                        & 2.86584136                \\ \hline
-Paraíba             & 17.5                                              & 63.98                                   & 17.23                                      & 17.87650259                                        & 0.3765025904              \\ \hline
-Paraná              & 11.8                                              & 75.54                                   & 6.27                                       & 14.73234609                                        & 2.932346088               \\ \hline
-Pernambuco          & 15.6                                              & 66.61                                   & 15.74                                      & 17.35357402                                        & 1.753574019               \\ \hline
-Piauí               & 20.8                                              & 71.38                                   & 19.31                                      & 17.60771458                                        & 3.19228542                \\ \hline
-Rio de Janeiro      & 14.1                                              & 90.46                                   & 3.68                                       & 12.88980624                                        & 1.210193758               \\ \hline
-Rio Grande do Norte & 16.9                                              & 75.38                                   & 15.84                                      & 16.58158064                                        & 0.3184193554              \\ \hline
-Rio Grande do Sul   & 11.1                                              & 85.78                                   & 4.27                                       & 13.42511917                                        & 2.325119172               \\ \hline
-Rondônia            & 17.1                                              & 72.76                                   & 9.74                                       & 15.64842047                                        & 1.451579528               \\ \hline
-Roraima             & 15.4                                              & 88.55                                   & 9.62                                       & 14.20095429                                        & 1.199045711               \\ \hline
-Santa Catarina      & 10.8                                              & 91.02                                   & 3.88                                       & 12.87763194                                        & 2.077631941               \\ \hline
-São Paulo           & 11.6                                              & 95.82                                   & 3.67                                       & 12.40434867                                        & 0.8043486742              \\ \hline
-Sergipe             & 17.6                                              & 68.62                                   & 15.98                                      & 17.2182602                                         & 0.3817397969              \\ \hline
-Tocantins           & 19.3                                              & 37.13                                   & 12.17                                      & 19.32859044                                        & 0.0285904435              \\ \hline
+Estados             & \multicolumn{1}{c|}{Taxa de mortalidade infantil} & \multicolumn{1}{c|}{População coberta por saneamento} & \multicolumn{1}{c|}{População servida por coleta de lixo} & \multicolumn{1}{c|}{Taxa de mortalidade calculada} & \multicolumn{1}{c|}{Erro} \\ \hline
+Acre                & 18.5                                              & 43.46                                                 & 78,21                                                     & 18,898548333                                       & -0,398548333              \\ \hline
+Alagoas             & 17                                                & 45.7                                                  & 76,11                                                     & 19,0433062994                                      & -2,0433062994             \\ \hline
+Amapá               & 24.1                                              & 56.55                                                 & 87,87                                                     & 16,4955285743                                      & 7,6044714257              \\ \hline
+Amazonas            & 20                                                & 61.55                                                 & 78,59                                                     & 17,4989738524                                      & 2,5010261476              \\ \hline
+Bahia               & 20.1                                              & 57.52                                                 & 77,83                                                     & 17,9108085623                                      & 2,1891914377              \\ \hline
+Ceará               & 15.2                                              & 52.53                                                 & 74,19                                                     & 18,82056665                                        & -3,62056665               \\ \hline
+Distrito Federal    & 12.1                                              & 96                                                    & 97,98                                                     & 12,068471693                                       & 0,031528307               \\ \hline
+Espírito Santo      & 11.7                                              & 82.79                                                 & 90,03                                                     & 14,2270857395                                      & -2,5270857395             \\ \hline
+Goiás               & 16.1                                              & 62.43                                                 & 93,33                                                     & 15,2500715166                                      & 0,8499284834              \\ \hline
+Maranhão            & 20                                                & 50.32                                                 & 54,03                                                     & 21,9711379998                                      & -1,9711379998             \\ \hline
+Mato Grosso         & 18.5                                              & 35.45                                                 & 85,67                                                     & 18,3882236801                                      & 0,1117763199              \\ \hline
+Mato Grosso do Sul  & 13.9                                              & 39.5                                                  & 89,82                                                     & 17,4727152633                                      & -3,5727152633             \\ \hline
+Minas Gerais        & 15.5                                              & 79.7                                                  & 88,69                                                     & 14,6550404545                                      & 0,8449595455              \\ \hline
+Pará                & 20.6                                              & 51.51                                                 & 70,65                                                     & 19,4207165889                                      & 1,1792834111              \\ \hline
+Paraíba             & 17.5                                              & 63.98                                                 & 84,01                                                     & 16,5156237909                                      & 0,9843762091              \\ \hline
+Paraná              & 11.8                                              & 75.54                                                 & 92,39                                                     & 14,4158318771                                      & -2,6158318771             \\ \hline
+Pernambuco          & 15.6                                              & 66.61                                                 & 84,74                                                     & 16,2121909247                                      & -0,6121909247             \\ \hline
+Piauí               & 20.8                                              & 71.38                                                 & 61,83                                                     & 19,2518390307                                      & 1,5481609693              \\ \hline
+Rio de Janeiro      & 14.1                                              & 90.46                                                 & 97,34                                                     & 12,574655617                                       & 1,525344383               \\ \hline
+Rio Grande do Norte & 16.9                                              & 75.38                                                 & 86,43                                                     & 15,3106166025                                      & 1,5893833975              \\ \hline
+Rio Grande do Sul   & 11.1                                              & 85.78                                                 & 92,31                                                     & 13,6673066389                                      & -2,5673066389             \\ \hline
+Rondônia            & 17.1                                              & 72.76                                                 & 74,1                                                      & 17,3317103721                                      & -0,2317103721             \\ \hline
+Roraima             & 15.4                                              & 88.55                                                 & 83,68                                                     & 14,7400518279                                      & 0,6599481721              \\ \hline
+Santa Catarina      & 10.8                                              & 91.02                                                 & 92,23                                                     & 13,2900588893                                      & -2,4900588893             \\ \hline
+São Paulo           & 11.6                                              & 95.82                                                 & 98,9                                                      & 11,9455505118                                      & -0,3455505118             \\ \hline
+Sergipe             & 17.6                                              & 68.62                                                 & 84,39                                                     & 16,1147857545                                      & 1,4852142455              \\ \hline
+Tocantins           & 19.3                                              & 37.13                                                 & 77,94                                                     & 19,4085829553                                      & -0,1085829553             \\ \hline
 \end{tabular}%
 }
 \end{table}
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\multicolumn{7}{|c|}{Resumo dos Resultados}                                                                                                                                          \\ \hline
+Estatísticas da Regressão            &                       &                       &                       &                       &                       &                       \\ \hline
+R Múltiplo                           & 0,7399894296          &                       &                       &                       &                       &                       \\ \hline
+R Quadrado                           & 0,547584356           &                       &                       &                       &                       &                       \\ \hline
+R Quadrado Ajustado                  & 0,5098830523          &                       &                       &                       &                       &                       \\ \hline
+Erro Padrão                          & 2,4430871676          &                       &                       &                       &                       &                       \\ \hline
+Observações                          & 27                    &                       &                       &                       &                       &                       \\ \hline
+                                     &                       &                       &                       &                       &                       &                       \\ \hline
+Análise de Variância                 &                       &                       &                       &                       &                       &                       \\ \hline
+                                     & df                    & SS                    & MS                    & F                     & F de Significação     &                       \\ \hline
+Regressão                            & 2                     & 173,3814318215        & 86,6907159107         & 14,5242817271         & 7,35277653639156E-005 &                       \\ \hline
+Resíduo                              & 24                    & 143,2481978081        & 5,9686749087          &                       &                       &                       \\ \hline
+Total                                & 26                    & 316,6296296296        &                       &                       &                       &                       \\ \hline
+                                     & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+                                     & Coeficientes          & Erro Padrão           & Estatística T         & P-valor               & 95\% Inferiores       & 95\% Superiores       \\ \hline
+Intercessão                          & 33,711583166          & 3,7884411322          & 8,8985368889          & 4,56093581088682E-009 & 25,8926249625         & 41,5305413695         \\ \hline
+População coberta por saneamento     & -0,0742554977         & 0,0305824409          & -2,4280435299         & 0,0230469361          & -0,1373745534         & -0,011136442          \\ \hline
+População servida por coleta de lixo & -0,1481382292         & 0,0529031159          & -2,8001796591         & 0,0099250388          & -0,2573248941         & -0,0389515643         \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+Sendo “t” o índice da observação e e[t] o erro padrão da regressão múltipla para cada observação, a expressão da regressão linear foi a seguinte:
+
+\textbf{mort[t] = + 33.7116 -0.0742555saneam[t] -0.148138coleta[t] + e[t]}
+
+Os coeficientes da regressão se mostram significativos, pois podemos observar que a estatística T de todos eles possuem valor absoluto superior a 2 e p-valor inferior a 0,05.
+
+Nossa hipótese de que as variáveis de saneamento e coleta de lixo explicam a mortalidade infantil se mantém válida, devido ao valor de F = 14,52428173 ser maior que o F Crítico
+de 3,4 para 2 graus de liberdade do numerador e 24 graus de liberdade do denominador.
+
+Interpretando os coeficientes de regressão em si, podemos retirar diversas informações pertinentes. Ambos os coeficientes das variáveis independentes (Porcentagens da população
+coberta por saneamento e por coleta de lixo) possuem uma relação inversa com a variável dependente (taxa de mortalidade infantil) , ou seja, o aumento de valor de qualquer uma das
+duas variáveis independentes deve levar à redução do valor da variável dependente.
+
+Pela expressão da regressão linear também podemos inferir que o aumento de uma unidade na taxa de saneamento leva à redução de 0,0742555 unidades na taxa de mortalidade e o aumento
+de uma unidade na taxa de coleta de lixo leva à redução de 0,148138 unidades na taxa de mortalidade, além dos acréscimos devido ao erro.
